@@ -1,0 +1,84 @@
+/* ====================================================== google fonts ====================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap");
+
+:root {
+  --white-color: #ffffff;
+  --light-grey-color: #677483;
+  --red-color: #ff6685;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass Mono", monospace;
+}
+
+body {
+  background: black;
+  color: var(--white-color);
+}
+
+.projectdetails-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  gap: 5px;
+}
+
+.projectdetails-container .headline {
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+.projectdetails-container .description {
+  text-transform: capitalize;
+  color: var(--light-grey-color);
+}
+
+.scroll-icons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: fixed;
+  bottom: 20px;
+  right: 2rem;
+}
+
+svg {
+  fill: var(--red-color);
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid var(--red-color);
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+svg:hover {
+  fill: var(--white-color);
+  background: var(--red-color);
+}
+
+.contentbox {
+  text-align: center;
+  text-transform: capitalize;
+  min-height: 100vmax;
+  margin: 11vmax 0;
+  position: relative;
+}
+
+.contentbox::after {
+  content: "";
+  display: block;
+  background-color: var(--red-color);
+  height: 1px;
+  width: 5%;
+  position: absolute;
+  top: 1.5%;
+  left: 47%;
+}
